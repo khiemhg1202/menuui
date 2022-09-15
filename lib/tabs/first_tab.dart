@@ -16,19 +16,19 @@ class FirstTab extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            userFollow(),
-            userFollow(),
-            userFollow(),
-            userFollow(),
-            userFollow(),
-            userFollow(),
+            userFollowing(),
+            userFollowing(),
+            userFollowing(),
+            userFollowing(),
+            userFollowing(),
+            userFollowing(),
           ],
         ),
       ),
     );
   }
 
-  Container userFollow() {
+  Container userFollowing() {
     return Container(
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.only(

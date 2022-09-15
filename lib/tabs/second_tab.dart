@@ -15,19 +15,19 @@ class SecondTab extends StatelessWidget {
         scrollDirection: Axis.vertical,
         child: Column(
           children: [
-            userFollow(),
-            userFollow(),
-            userFollow(),
-            userFollow(),
-            userFollow(),
-            userFollow(),
+            userFollower(),
+            userFollower(),
+            userFollower(),
+            userFollower(),
+            userFollower(),
+            userFollower(),
           ],
         ),
       ),
     );
   }
 
-  Container userFollow() {
+  Container userFollower() {
     return Container(
       padding: const EdgeInsets.all(16),
       margin: const EdgeInsets.only(
