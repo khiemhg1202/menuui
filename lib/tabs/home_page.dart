@@ -7,9 +7,10 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
+    return Scaffold(
+      body: Container(
+         margin: const EdgeInsets.all(10),
+         child: const Text(
           "Hello",
           style: TextStyle(fontSize: 14),
         ),
