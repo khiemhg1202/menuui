@@ -4,9 +4,15 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:menuui/tabs/first_tab.dart';
 import 'package:menuui/tabs/second_tab.dart';
 
-class bodyTab extends StatelessWidget {
-  const bodyTab({Key? key}) : super(key: key);
+class BodyTab extends StatefulWidget {
+  const BodyTab({Key? key}) : super(key: key);
 
+  @override
+  State<BodyTab> createState() => _BodyTabState();
+}
+
+class _BodyTabState extends State<BodyTab> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) => DefaultTabController(
       length: 2,
@@ -50,6 +56,30 @@ class bodyTab extends StatelessWidget {
               ),
             ),
           ],
+        ),
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: const Color(0xFFFFFFFF),
+          currentIndex: _currentIndex,
+          selectedIconTheme: IconThemeData(
+              color: Colors.orange.shade200, opacity: 1.0, size: 45),
+          unselectedIconTheme:
+              const IconThemeData(color: Colors.black, opacity: 0.5, size: 25),
+          items: [
+            BottomNavigationBarItem(
+                icon: Image.asset("assets/icons/ic_home.png"), label: "Home"),
+            BottomNavigationBarItem(
+                icon: Image.asset("assets/icons/ic_user.png"), label: "User"),
+            BottomNavigationBarItem(
+                icon: Image.asset("assets/icons/ic_chat.png"), label: "Chat"),
+            BottomNavigationBarItem(
+                icon: Image.asset("assets/icons/ic_save.png"), label: "Save"),
+          ],
+          onTap: (index) {
+            setState(() {
+              _currentIndex = index;
+            });
+          },
         ),
       ));
 }
