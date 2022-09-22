@@ -5,35 +5,23 @@ import 'package:google_fonts/google_fonts.dart';
 
 class FirstTab extends StatelessWidget {
   const FirstTab({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-        top: 19,
-      ),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            userFollowing(),
-            userFollowing(),
-            userFollowing(),
-            userFollowing(),
-            userFollowing(),
-            userFollowing(),
-          ],
+        margin: const EdgeInsets.only(
+          top: 12,
         ),
-      ),
-    );
+        child: ListView.builder(
+            itemCount: 6,
+            itemBuilder: (context, index) {
+              return userFollowing();
+            }));
   }
 
   Container userFollowing() {
     return Container(
       padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.only(
-        bottom: 8,
-      ),
+      margin: const EdgeInsets.only(bottom: 8, left: 16, right: 16),
       decoration: BoxDecoration(
         color: const Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(16),

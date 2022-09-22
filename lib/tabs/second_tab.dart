@@ -8,31 +8,20 @@ class SecondTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(
-        top: 19,
-      ),
-      child: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Column(
-          children: [
-            userFollower(),
-            userFollower(),
-            userFollower(),
-            userFollower(),
-            userFollower(),
-            userFollower(),
-          ],
+        margin: const EdgeInsets.only(
+          top: 20,
         ),
-      ),
-    );
+        child: ListView.builder(
+            itemCount: 12,
+            itemBuilder: (context, index) {
+              return userFollower();
+            }));
   }
 
   Container userFollower() {
     return Container(
       padding: const EdgeInsets.all(16),
-      margin: const EdgeInsets.only(
-        bottom: 8,
-      ),
+      margin: const EdgeInsets.only(bottom: 8, left: 16, right: 16),
       decoration: BoxDecoration(
         color: const Color(0xFFFFFFFF),
         borderRadius: BorderRadius.circular(16),

@@ -12,7 +12,7 @@ class BodyTab extends StatefulWidget {
 }
 
 class _BodyTabState extends State<BodyTab> {
-  int _currentIndex = 0;
+  int _currentIndex = 1;
   @override
   Widget build(BuildContext context) => DefaultTabController(
       length: 2,
@@ -22,15 +22,15 @@ class _BodyTabState extends State<BodyTab> {
             Padding(
               padding: const EdgeInsets.only(
                 top: 8,
-                bottom: 16,
-                left: 0,
-                right: 0,
+                bottom: 12,
+                left: 16,
+                right: 16,
               ),
               child: Container(
-                padding: EdgeInsets.all(5),
+                padding: const EdgeInsets.all(4),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFFFFFFF),
+                  color: const Color(0xFFFFFFFF),
                 ),
                 child: TabBar(
                   tabs: const [Text("Following"), Text("Follower")],
@@ -62,9 +62,11 @@ class _BodyTabState extends State<BodyTab> {
           backgroundColor: const Color(0xFFFFFFFF),
           currentIndex: _currentIndex,
           selectedIconTheme: IconThemeData(
-              color: Colors.orange.shade200, opacity: 1.0, size: 45),
-          unselectedIconTheme:
-              const IconThemeData(color: Colors.black, opacity: 0.5, size: 25),
+              color: Colors.orange.shade400, opacity: 1.0, size: 32),
+          unselectedIconTheme: const IconThemeData(
+              color: Colors.black54, opacity: 0.5, size: 28),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
           items: [
             BottomNavigationBarItem(
                 icon: Image.asset("assets/icons/ic_home.png"), label: "Home"),
