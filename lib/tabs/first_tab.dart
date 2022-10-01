@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class FirstTab extends StatelessWidget {
-  const FirstTab({Key? key}) : super(key: key);
+class FollowingTab extends StatelessWidget {
+  const FollowingTab({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -65,10 +65,10 @@ class UserFollowing extends StatelessWidget {
         contentPadding: EdgeInsets.zero,
         leading: CircleAvatar(
           radius: 30,
-          backgroundImage: AssetImage("assets/images/i_avt.png"),
+          backgroundImage: AssetImage("assets/i_avt.png"),
         ),
         title: const Text(
-          "Orlando Diggs",
+          "Orlando Digs",
           style: TextStyle(fontWeight: FontWeight.w700),
         ),
         subtitle: const Text("California, USA",

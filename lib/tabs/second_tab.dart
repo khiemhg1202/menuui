@@ -2,8 +2,8 @@
 
 import 'package:flutter/material.dart';
 
-class SecondTab extends StatelessWidget {
-  const SecondTab({Key? key}) : super(key: key);
+class FollowerTab extends StatelessWidget {
+  const FollowerTab({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -33,9 +33,9 @@ class SecondTab extends StatelessWidget {
               contentPadding: EdgeInsets.zero,
               leading: CircleAvatar(
                 radius: 30,
-                backgroundImage: AssetImage("assets/images/i_avt.png"),
+                backgroundImage: AssetImage("assets/i_avt.png"),
               ),
-              title: const Text("Orlando Diggs",
+              title: const Text("Orlando Digs",
                   style: TextStyle(fontWeight: FontWeight.w700)),
               subtitle: const Text("California, USA",
                   style: TextStyle(fontWeight: FontWeight.w400)),

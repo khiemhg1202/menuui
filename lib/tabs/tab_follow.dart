@@ -4,15 +4,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:menuui/tabs/first_tab.dart';
 import 'package:menuui/tabs/second_tab.dart';
 
-class BodyTab extends StatefulWidget {
-  const BodyTab({Key? key}) : super(key: key);
+class TabFollow extends StatefulWidget {
+  const TabFollow({Key? key}) : super(key: key);
 
   @override
-  State<BodyTab> createState() => _BodyTabState();
+  State<TabFollow> createState() => _TabFollowState();
 }
 
-class _BodyTabState extends State<BodyTab> {
-  int _currentIndex = 1;
+class _TabFollowState extends State<TabFollow> {
   @override
   Widget build(BuildContext context) => DefaultTabController(
       length: 2,
@@ -49,39 +48,13 @@ class _BodyTabState extends State<BodyTab> {
               child: TabBarView(
                 children: [
                   // 1st
-                  FirstTab(),
+                  FollowingTab(),
                   //2st
-                  SecondTab()
+                  FollowerTab()
                 ],
               ),
             ),
           ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          backgroundColor: const Color(0xFFFFFFFF),
-          currentIndex: _currentIndex,
-          selectedIconTheme: IconThemeData(
-              color: Colors.orange.shade400, opacity: 1.0, size: 32),
-          unselectedIconTheme: const IconThemeData(
-              color: Colors.black54, opacity: 0.5, size: 28),
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          items: [
-            BottomNavigationBarItem(
-                icon: Image.asset("assets/icons/ic_home.png"), label: "Home"),
-            BottomNavigationBarItem(
-                icon: Image.asset("assets/icons/ic_user.png"), label: "User"),
-            BottomNavigationBarItem(
-                icon: Image.asset("assets/icons/ic_chat.png"), label: "Chat"),
-            BottomNavigationBarItem(
-                icon: Image.asset("assets/icons/ic_save.png"), label: "Save"),
-          ],
-          onTap: (index) {
-            setState(() {
-              _currentIndex = index;
-            });
-          },
         ),
       ));
 }
